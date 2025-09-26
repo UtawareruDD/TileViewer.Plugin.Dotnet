@@ -8,7 +8,7 @@ be used as a starting point for C# implementations.
 
 | Project | Description |
 | --- | --- |
-| `TileViewer.Plugin.Dotnet | Class library targeting `net9.0` with AOT publishing enabled. |
+| TileViewer.Plugin.Dotnet | Class library targeting `net9.0` with AOT publishing enabled. |
 
 ## Getting started
 
