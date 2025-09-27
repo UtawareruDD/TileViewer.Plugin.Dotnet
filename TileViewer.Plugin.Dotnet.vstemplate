@@ -1,0 +1,17 @@
+<VSTemplate Version="3.0.0" Type="Project" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+  <TemplateData>
+    <Name>TileViewer Managed Plugin</Name>
+    <Description>A Native AOT-ready managed TileViewer plugin project template.</Description>
+    <ProjectType>CSharp</ProjectType>
+    <SortOrder>1000</SortOrder>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>TileViewer.Plugin</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <Icon>icon.ico</Icon>
+  </TemplateData>
+  <TemplateContent>
+    <Project File="TileViewer.Plugin.Dotnet/TileViewer.Plugin.Dotnet.csproj" ReplaceParameters="true" />
+  </TemplateContent>
+</VSTemplate>
