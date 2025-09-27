@@ -45,6 +45,7 @@ When publishing, enable AOT with:
 
 ```bash
 dotnet publish TileViewer.Plugin.Dotnet.csproj -c Release -r win-x64 -p:PublishAot=true
+dotnet publish TileViewer.Plugin.Dotnet.csproj -c Release -r linux-x64 -p:PublishAot=true
 ```
 
 The project file already sets `PublishAot` to `true` so the property only needs to be reaffirmed when a RID is specified.
