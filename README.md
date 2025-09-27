@@ -29,7 +29,7 @@ be used as a starting point for C# implementations.
 - **Extensible decoder pipeline** – Implement `IManagedTileDecoder` to provide custom decoding logic. `PagedTwoBitTileDecoder` demonstrates how to expand packed pixels with `DecodeAll` while keeping the implementation entirely managed.
 - **Configuration logging** – When the host updates plugin options, the managed bridge records the changes with `Log` so you can observe configuration churn without attaching a debugger.
 
-## DecodeAll 2-bit demo (Ryu-Koku font.bin decode fontsize16x16)
+## DecodeAll demo (PSP Ryu-Koku font.bin decode fontsize16x16 2bpp )
 
 `ManagedTileViewerPlugin` ships with `MainTileDecoder`, a managed decoder that unpacks four logical pages encoded inside each byte. The plugin exposes a `page` option with the values `0`–`3`; TileViewer forwards the selected value back to the managed decoder via `DecodeAll` so only one page is expanded per run. Each packed 2-bit value is treated as an index into `cp4 = { 0x00, 0xFF, 0xFF, 0xFF }`, providing the pixel alpha while leaving RGB fixed at `0xFF` to emphasize the alpha masking effect.
 
