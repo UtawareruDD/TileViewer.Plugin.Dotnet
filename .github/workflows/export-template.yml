@@ -24,8 +24,6 @@ jobs:
             --exclude 'obj/' \
             --exclude '.vs/' \
             TileViewer.Plugin.Dotnet/ "$TEMPLATE_ROOT/"
-          mkdir -p "$TEMPLATE_ROOT/.github/workflows"
-          cp .github/workflows/build.yml "$TEMPLATE_ROOT/.github/workflows/build.yml"
 
       - name: Archive template
         run: |
