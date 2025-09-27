@@ -44,7 +44,7 @@ dll/so ==> TileDecoderNativeExports(unsafe) ==> ManagedTileViewerPlugin ==> ICon
 When publishing, enable AOT with:
 
 ```bash
-dotnet publish src/TileViewer.ManagedPlugin/TileViewer.ManagedPlugin.csproj -c Release -r win-x64 -p:PublishAot=true
+dotnet publish TileViewer.Plugin.Dotnet.csproj -c Release -r win-x64 -p:PublishAot=true
 ```
 
 The project file already sets `PublishAot` to `true` so the property only needs to be reaffirmed when a RID is specified.
