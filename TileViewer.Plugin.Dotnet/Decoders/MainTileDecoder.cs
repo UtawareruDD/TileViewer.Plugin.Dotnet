@@ -164,7 +164,7 @@ public sealed class MainTileDecoder : IConfigurableTileDecoder
                 Name = "RemainIndex",
                 Type = "bool",
                 Help = "Preserve the original tile ordering when decoding.",
-                Value = "true",
+                Value = true,
             },
             new PluginOption
             {
@@ -172,7 +172,7 @@ public sealed class MainTileDecoder : IConfigurableTileDecoder
                 Type = "enum",
                 Choices = new List<string>(){ "0","1","2","3"},
                 Help = "Select which 2-bit page should be expanded when decoding.",
-                Value = "0",
+                Value = 1,
             },
              new PluginOption
             {
@@ -180,7 +180,7 @@ public sealed class MainTileDecoder : IConfigurableTileDecoder
                 Type = "enum",
                 Choices = new List<string>(){ "test1","test2","test3"},
                 Help = "test option",
-                Value = "test1",
+                Value = 1,
             }
         };
     }

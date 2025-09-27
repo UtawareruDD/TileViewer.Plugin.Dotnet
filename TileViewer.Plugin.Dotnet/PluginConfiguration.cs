@@ -52,6 +52,10 @@ public class PluginOption
 [JsonSerializable(typeof(List<PluginOption>))]
 [JsonSerializable(typeof(PluginOption))]
 [JsonSerializable(typeof(List<string>))]
+[JsonSerializable(typeof(object))]
+[JsonSerializable(typeof(string))]
+[JsonSerializable(typeof(bool))]
+[JsonSerializable(typeof(int))]
 internal sealed partial class PluginConfigurationJsonContext : JsonSerializerContext
 {
 }
