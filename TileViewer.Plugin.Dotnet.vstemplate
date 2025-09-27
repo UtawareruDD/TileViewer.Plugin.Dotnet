@@ -1,17 +1,41 @@
-<VSTemplate Version="3.0.0" Type="Project" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
   <TemplateData>
-    <Name>TileViewer Managed Plugin</Name>
-    <Description>A Native AOT-ready managed TileViewer plugin project template.</Description>
+    <Name>TileViewer.Plugin.Dotnet</Name>
+    <Description>.Net Plugin for TileViewer</Description>
     <ProjectType>CSharp</ProjectType>
+    <ProjectSubType>
+    </ProjectSubType>
     <SortOrder>1000</SortOrder>
     <CreateNewFolder>true</CreateNewFolder>
-    <DefaultName>TileViewer.Plugin</DefaultName>
+    <DefaultName>TileViewer.Plugin.Dotnet</DefaultName>
     <ProvideDefaultName>true</ProvideDefaultName>
     <LocationField>Enabled</LocationField>
     <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
-    <Icon>icon.ico</Icon>
+    <CreateInPlace>true</CreateInPlace>
+    <Icon>__TemplateIcon.ico</Icon>
   </TemplateData>
   <TemplateContent>
-    <Project File="TileViewer.Plugin.Dotnet/TileViewer.Plugin.Dotnet.csproj" ReplaceParameters="true" />
+    <Project TargetFileName="TileViewer.Plugin.Dotnet.csproj" File="TileViewer.Plugin.Dotnet.csproj" ReplaceParameters="true">
+      <Folder Name="Properties" TargetFolderName="Properties">
+        <Folder Name="PublishProfiles" TargetFolderName="PublishProfiles">
+          <ProjectItem ReplaceParameters="false" TargetFileName="linux_x64.pubxml">Properties/PublishProfiles/linux_x64.pubxml</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="win_x64.pubxml">Properties/PublishProfiles/win_x64.pubxml</ProjectItem>
+        </Folder>
+      </Folder>
+      <Folder Name="Decoders" TargetFolderName="Decoders">
+        <ProjectItem ReplaceParameters="true" TargetFileName="MainTileDecoder.cs">Decoders/MainTileDecoder.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="PassthroughTileDecoder.cs">Decoders/PassthroughTileDecoder.cs</ProjectItem>
+      </Folder>
+      <Folder Name="Native" TargetFolderName="Native">
+        <ProjectItem ReplaceParameters="true" TargetFileName="TileDecoderNativeExports.cs">Native/TileDecoderNativeExports.cs</ProjectItem>
+      </Folder>
+      <ProjectItem ReplaceParameters="true" TargetFileName="IManagedTileDecoder.cs">IManagedTileDecoder.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="ITileViewerPlugin.cs">ITileViewerPlugin.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="ManagedTileViewerPlugin.cs">ManagedTileViewerPlugin.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="PluginConfiguration.cs">PluginConfiguration.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="PluginStatus.cs">PluginStatus.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="TileDecodeRequests.cs">TileDecodeRequests.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="TilePrimitives.cs">TilePrimitives.cs</ProjectItem>
+    </Project>
   </TemplateContent>
 </VSTemplate>

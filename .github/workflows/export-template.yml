@@ -18,12 +18,12 @@ jobs:
           TEMPLATE_ROOT="artifacts/template"
           mkdir -p "$TEMPLATE_ROOT"
           cp TileViewer.Plugin.Dotnet.vstemplate "$TEMPLATE_ROOT/"
-          cp asset/icon.ico "$TEMPLATE_ROOT/"
+          cp asset/icon/icon1.ico "$TEMPLATE_ROOT/__TemplateIcon.ico"
           rsync -a \
             --exclude 'bin/' \
             --exclude 'obj/' \
             --exclude '.vs/' \
-            TileViewer.Plugin.Dotnet "$TEMPLATE_ROOT/"
+            TileViewer.Plugin.Dotnet/ "$TEMPLATE_ROOT/"
 
       - name: Archive template
         run: |
