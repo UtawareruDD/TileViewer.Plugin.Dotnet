@@ -29,5 +29,5 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: TileViewer.Plugin.Dotnet.Template
-          path: artifacts/TileViewer.Plugin.Dotnet.Template.zip
+          path: artifacts/template
           if-no-files-found: error
