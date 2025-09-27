@@ -39,6 +39,7 @@ Create a new class implementing IConfigurableTileDecoder. If you don’t know ho
 dll/so ==> TileDecoderNativeExports(unsafe) ==> ManagedTileViewerPlugin ==> IConfigurableTileDecoder
 ```
 
+
 ## Publishing for Native AOT
 
 When publishing, enable AOT with:
@@ -47,5 +48,7 @@ When publishing, enable AOT with:
 dotnet publish TileViewer.Plugin.Dotnet.csproj -c Release -r win-x64 -p:PublishAot=true
 dotnet publish TileViewer.Plugin.Dotnet.csproj -c Release -r linux-x64 -p:PublishAot=true
 ```
+
+Copy dll/so to `plugin` Folder
 
 The project file already sets `PublishAot` to `true` so the property only needs to be reaffirmed when a RID is specified.
