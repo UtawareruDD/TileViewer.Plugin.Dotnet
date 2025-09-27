@@ -25,11 +25,6 @@ jobs:
             --exclude '.vs/' \
             TileViewer.Plugin.Dotnet/ "$TEMPLATE_ROOT/"
 
-      - name: Archive template
-        run: |
-          cd artifacts/template
-          zip -r ../TileViewer.Plugin.Dotnet.Template.zip .
-
       - name: Upload template artifact
         uses: actions/upload-artifact@v4
         with:
