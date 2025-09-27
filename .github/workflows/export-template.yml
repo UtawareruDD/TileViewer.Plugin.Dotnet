@@ -31,3 +31,18 @@ jobs:
           name: TileViewer.Plugin.Dotnet.Template
           path: artifacts/template
           if-no-files-found: error
+
+
+      - name: Create template archive
+        run: |
+          mkdir -p artifacts
+          cd artifacts
+          zip -r TileViewer.Plugin.Dotnet.Template.zip template
+
+      - name: Upload release asset
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: vstemplate
+          files: artifacts/TileViewer.Plugin.Dotnet.Template.zip
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
