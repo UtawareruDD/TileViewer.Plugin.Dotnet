@@ -16,6 +16,11 @@
   </TemplateData>
   <TemplateContent>
     <Project TargetFileName="TileViewer.Plugin.Dotnet.csproj" File="TileViewer.Plugin.Dotnet.csproj" ReplaceParameters="true">
+      <Folder Name=".github" TargetFolderName=".github">
+        <Folder Name="workflows" TargetFolderName="workflows">
+          <ProjectItem ReplaceParameters="false" TargetFileName="build.yml">.github/workflows/build.yml</ProjectItem>
+        </Folder>
+      </Folder>
       <Folder Name="Properties" TargetFolderName="Properties">
         <Folder Name="PublishProfiles" TargetFolderName="PublishProfiles">
           <ProjectItem ReplaceParameters="false" TargetFileName="linux_x64.pubxml">linux_x64.pubxml</ProjectItem>
