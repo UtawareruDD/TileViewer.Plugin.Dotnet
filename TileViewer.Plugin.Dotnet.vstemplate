@@ -18,16 +18,16 @@
     <Project TargetFileName="TileViewer.Plugin.Dotnet.csproj" File="TileViewer.Plugin.Dotnet.csproj" ReplaceParameters="true">
       <Folder Name="Properties" TargetFolderName="Properties">
         <Folder Name="PublishProfiles" TargetFolderName="PublishProfiles">
-          <ProjectItem ReplaceParameters="false" TargetFileName="linux_x64.pubxml">Properties/PublishProfiles/linux_x64.pubxml</ProjectItem>
-          <ProjectItem ReplaceParameters="false" TargetFileName="win_x64.pubxml">Properties/PublishProfiles/win_x64.pubxml</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="linux_x64.pubxml">linux_x64.pubxml</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="win_x64.pubxml">win_x64.pubxml</ProjectItem>
         </Folder>
       </Folder>
       <Folder Name="Decoders" TargetFolderName="Decoders">
-        <ProjectItem ReplaceParameters="true" TargetFileName="MainTileDecoder.cs">Decoders/MainTileDecoder.cs</ProjectItem>
-        <ProjectItem ReplaceParameters="true" TargetFileName="PassthroughTileDecoder.cs">Decoders/PassthroughTileDecoder.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="MainTileDecoder.cs">MainTileDecoder.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="PassthroughTileDecoder.cs">PassthroughTileDecoder.cs</ProjectItem>
       </Folder>
       <Folder Name="Native" TargetFolderName="Native">
-        <ProjectItem ReplaceParameters="true" TargetFileName="TileDecoderNativeExports.cs">Native/TileDecoderNativeExports.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="TileDecoderNativeExports.cs">TileDecoderNativeExports.cs</ProjectItem>
       </Folder>
       <ProjectItem ReplaceParameters="true" TargetFileName="IManagedTileDecoder.cs">IManagedTileDecoder.cs</ProjectItem>
       <ProjectItem ReplaceParameters="true" TargetFileName="ITileViewerPlugin.cs">ITileViewerPlugin.cs</ProjectItem>
